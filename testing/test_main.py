@@ -20,4 +20,4 @@ class UnitTests(unittest.TestCase) :
                 inputs.append((n,i*0.1,))
                 myvar = randomvar( n*p, variance=n*p*(1-p), vmin=0, vmax=n, isinteger=True )
                 variables.append( myvar )
-        assert( check_func('binomial',inputs, variables ) )
+        assert( check_func('binomial',inputs, variables, calls=['bernoulli'] ) )
