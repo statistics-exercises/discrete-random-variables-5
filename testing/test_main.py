@@ -17,7 +17,7 @@ class UnitTests(unittest.TestCase) :
         for n in range(3,6) :
             for i in range(1,9) :
                 p = i*0.1
-                inputs.append((i*0.1,))
+                inputs.append((n,i*0.1,))
                 myvar = randomvar( n*p, variance=n*p*(1-p), vmin=0, vmax=n, isinteger=True )
                 variables.append( myvar )
         assert( check_func('binomial',inputs, variables ) )
